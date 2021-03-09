@@ -1,6 +1,7 @@
 module.exports = {
     themeConfig: {
       displayAllHeaders: true,
+      logo: '/digger-logo-text.png',
       sidebar: [
         {
           title: 'Overview',
