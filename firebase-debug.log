@@ -1,0 +1,122 @@
+[debug] [2021-03-08T20:40:42.114Z] ----------------------------------------------------------------------
+[debug] [2021-03-08T20:40:42.116Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init hosting:github
+[debug] [2021-03-08T20:40:42.116Z] CLI Version:   9.5.0
+[debug] [2021-03-08T20:40:42.116Z] Platform:      darwin
+[debug] [2021-03-08T20:40:42.116Z] Node Version:  v14.16.0
+[debug] [2021-03-08T20:40:42.117Z] Time:          Mon Mar 08 2021 20:40:42 GMT+0000 (Greenwich Mean Time)
+[debug] [2021-03-08T20:40:42.117Z] ----------------------------------------------------------------------
+[debug] [2021-03-08T20:40:42.117Z] 
+[debug] [2021-03-08T20:40:42.123Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-08T20:40:42.124Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/izalutski/diggerhq/docs-site
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using digger-docs-site. 
+[debug] [2021-03-08T20:40:42.131Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/digger-docs-site [none]
+[debug] [2021-03-08T20:40:42.324Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/digger-docs-site 200
+[debug] [2021-03-08T20:40:42.324Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/digger-docs-site {"projectId":"digger-docs-site","projectNumber":"474819960496","displayName":"digger-docs-site","name":"projects/digger-docs-site","resources":{"hostingSite":"digger-docs-site"},"state":"ACTIVE"}
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Detected a .git folder at /Users/izalutski/diggerhq/docs-site 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=876802880&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-03-08T20:40:52.957Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"5c0ff6ab640eb09201f4","redirect_uri":"http://localhost:9005","state":"876802880"}
+[debug] [2021-03-08T20:40:53.190Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Mon, 08 Mar 2021 20:40:53 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, Accept-Encoding, Accept, X-Requested-With","etag":"W/\"362d5f0f3e096852d1c4c4cb1aeefa53\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"1; mode=block","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker-5029ae85.js gist.github.com/socket-worker-5029ae85.js","x-github-request-id":"C250:7393:49981FD:4BE5025:60468BD4"}
+[debug] [2021-03-08T20:40:53.194Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2021-03-08T20:40:53.455Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2021-03-08T20:40:53.455Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"ZIJ","id":1280498,"node_id":"MDQ6VXNlcjEyODA0OTg=","avatar_url":"https://avatars.githubusercontent.com/u/1280498?v=4","gravatar_id":"","url":"https://api.github.com/users/ZIJ","html_url":"https://github.com/ZIJ","followers_url":"https://api.github.com/users/ZIJ/followers","following_url":"https://api.github.com/users/ZIJ/following{/other_user}","gists_url":"https://api.github.com/users/ZIJ/gists{/gist_id}","starred_url":"https://api.github.com/users/ZIJ/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/ZIJ/subscriptions","organizations_url":"https://api.github.com/users/ZIJ/orgs","repos_url":"https://api.github.com/users/ZIJ/repos","events_url":"https://api.github.com/users/ZIJ/events{/privacy}","received_events_url":"https://api.github.com/users/ZIJ/received_events","type":"User","site_admin":false,"name":"Igor Zalutski","company":"TicTrac","blog":"linkedin.com/in/izalutski","location":"London","email":"izalutski@gmail.com","hireable":true,"bio":null,"twitter_username":null,"public_repos":53,"public_gists":10,"followers":23,"following":17,"created_at":"2011-12-22T17:20:29Z","updated_at":"2021-03-08T20:40:52Z","private_gists":6,"total_private_repos":3,"owned_private_repos":3,"disk_usage":40729,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] ✔  Success! Logged into GitHub as ZIJ 
+[info] 
+[debug] [2021-03-08T20:40:53.470Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2021-03-08T20:40:53.660Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2021-03-08T20:40:53.660Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2021-03-08T20:43:23.187Z] >>> [apiv2][query] GET https://api.github.com/repos/diggerhq/docs-site/actions/secrets/public-key type=owner
+[debug] [2021-03-08T20:43:23.391Z] <<< [apiv2][status] GET https://api.github.com/repos/diggerhq/docs-site/actions/secrets/public-key 403
+[debug] [2021-03-08T20:43:23.391Z] <<< [apiv2][body] GET https://api.github.com/repos/diggerhq/docs-site/actions/secrets/public-key {"message":"Must have admin rights to Repository.","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2021-03-08T20:43:29.782Z] >>> [apiv2][query] GET https://api.github.com/repos/diggerhq/docs-site/actions/secrets/public-key type=owner
+[debug] [2021-03-08T20:43:29.982Z] <<< [apiv2][status] GET https://api.github.com/repos/diggerhq/docs-site/actions/secrets/public-key 403
+[debug] [2021-03-08T20:43:29.982Z] <<< [apiv2][body] GET https://api.github.com/repos/diggerhq/docs-site/actions/secrets/public-key {"message":"Must have admin rights to Repository.","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2021-03-08T20:43:41.246Z] ----------------------------------------------------------------------
+[debug] [2021-03-08T20:43:41.248Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init hosting:github
+[debug] [2021-03-08T20:43:41.249Z] CLI Version:   9.5.0
+[debug] [2021-03-08T20:43:41.249Z] Platform:      darwin
+[debug] [2021-03-08T20:43:41.249Z] Node Version:  v14.16.0
+[debug] [2021-03-08T20:43:41.250Z] Time:          Mon Mar 08 2021 20:43:41 GMT+0000 (Greenwich Mean Time)
+[debug] [2021-03-08T20:43:41.250Z] ----------------------------------------------------------------------
+[debug] [2021-03-08T20:43:41.250Z] 
+[debug] [2021-03-08T20:43:41.256Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-08T20:43:41.256Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/izalutski/diggerhq/docs-site
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using digger-docs-site. 
+[debug] [2021-03-08T20:43:41.263Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/digger-docs-site [none]
+[debug] [2021-03-08T20:43:41.477Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/digger-docs-site 200
+[debug] [2021-03-08T20:43:41.477Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/digger-docs-site {"projectId":"digger-docs-site","projectNumber":"474819960496","displayName":"digger-docs-site","name":"projects/digger-docs-site","resources":{"hostingSite":"digger-docs-site"},"state":"ACTIVE"}
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Detected a .git folder at /Users/izalutski/diggerhq/docs-site 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=27315243&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-03-08T20:43:41.966Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"86ed9a2bce8945afc342","redirect_uri":"http://localhost:9005","state":"27315243"}
+[debug] [2021-03-08T20:43:42.193Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Mon, 08 Mar 2021 20:43:42 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, Accept-Encoding, Accept, X-Requested-With","etag":"W/\"5fcef697844e5f02882fb14d7fb76166\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"1; mode=block","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker-5029ae85.js gist.github.com/socket-worker-5029ae85.js","x-github-request-id":"C508:78AF:4C4651B:4EA77D9:60468C7D"}
+[debug] [2021-03-08T20:43:42.195Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2021-03-08T20:43:42.438Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2021-03-08T20:43:42.438Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"ZIJ","id":1280498,"node_id":"MDQ6VXNlcjEyODA0OTg=","avatar_url":"https://avatars.githubusercontent.com/u/1280498?v=4","gravatar_id":"","url":"https://api.github.com/users/ZIJ","html_url":"https://github.com/ZIJ","followers_url":"https://api.github.com/users/ZIJ/followers","following_url":"https://api.github.com/users/ZIJ/following{/other_user}","gists_url":"https://api.github.com/users/ZIJ/gists{/gist_id}","starred_url":"https://api.github.com/users/ZIJ/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/ZIJ/subscriptions","organizations_url":"https://api.github.com/users/ZIJ/orgs","repos_url":"https://api.github.com/users/ZIJ/repos","events_url":"https://api.github.com/users/ZIJ/events{/privacy}","received_events_url":"https://api.github.com/users/ZIJ/received_events","type":"User","site_admin":false,"name":"Igor Zalutski","company":"TicTrac","blog":"linkedin.com/in/izalutski","location":"London","email":"izalutski@gmail.com","hireable":true,"bio":null,"twitter_username":null,"public_repos":53,"public_gists":10,"followers":23,"following":17,"created_at":"2011-12-22T17:20:29Z","updated_at":"2021-03-08T20:40:52Z","private_gists":6,"total_private_repos":3,"owned_private_repos":3,"disk_usage":40729,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] ✔  Success! Logged into GitHub as ZIJ 
+[info] 
+[debug] [2021-03-08T20:43:49.552Z] >>> [apiv2][query] GET https://api.github.com/repos/diggerhq/docs-site/actions/secrets/public-key type=owner
+[debug] [2021-03-08T20:43:49.756Z] <<< [apiv2][status] GET https://api.github.com/repos/diggerhq/docs-site/actions/secrets/public-key 403
+[debug] [2021-03-08T20:43:49.756Z] <<< [apiv2][body] GET https://api.github.com/repos/diggerhq/docs-site/actions/secrets/public-key {"message":"Must have admin rights to Repository.","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
