@@ -8,6 +8,7 @@ module.exports = {
           children: [
             '/',
             '/concepts',
+            '/digger-vs-other',
           ]
         },
         {
