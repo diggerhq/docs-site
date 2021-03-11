@@ -17,8 +17,7 @@ module.exports = {
           collapsable: false,
           children: [
             '/installation',
-            '/quickstart-server',
-            '/quickstart-static'
+            '/quickstart/node-express'
           ]
         },
         {
