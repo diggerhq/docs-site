@@ -8,16 +8,16 @@ module.exports = {
           collapsable: false,
           children: [
             '/',
-            '/concepts',
-            '/digger-vs-other',
+            '/overview/concepts',
+            '/overview/digger-vs-other',
           ]
         },
         {
           title: 'Getting Started',
           collapsable: false,
           children: [
-            '/installation',
-            '/quickstart/node-express'
+            '/getting-started/installation',
+            '/getting-started/node-express'
           ]
         },
         {

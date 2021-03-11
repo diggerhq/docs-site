@@ -1,5 +1,0 @@
-# Concepts
-
-## Project
-## Service
-## Environment
