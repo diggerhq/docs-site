@@ -33,11 +33,12 @@ dg project init
 ```
 
 ### Register your service
-Digger will analyse your app's code and update the `digger.yml` file with appropriate settings
+Digger will analyse your app's code, update the `digger.yml` file with appropriate settings, and synchronise it with the backend
 ```
-dg service add .
+dg service add
+dg sync
 ```
-Alternatively you could just update this file manually
+Alternatively you could just update this file manually, then run `dg sync`
 
 ### Create an environment
 This will be the "destination" of your app in your AWS account. Any project has at least one environment, but often more: Production / Dev / Staging, or one per customer, or one per geography.
