@@ -33,7 +33,16 @@ Lightsail is your Virtual Private Server pre-configured by Amazon, a rough equiv
 
 
 ## AWS ElasticBeanstalk
+Elastic Beanstalk is an AWS service which allows for easy deployment of common apps and they also support containers. They have their own cli tool `eb` to manage deploying. In a way, Elastic Beanstalk is a PaaS-like platform like Heroku but cloud-native and on AWS. However if you start on AWS Beanstalk, it is hard to migrate your stack to another stack such as ECS. Unless if you use digger to deploy. In fact we have worked with several clients who wanted to move away from Beanstalk to a sister architecture such as ECS as their scale grew out of that which Beanstalk provides.
+
 ## AWS Copilot
+Copilot, previously ECS-cli is CLI tool to set up and deploy to Amazon ECS. Copilot uses cloudformation under the hood while digger relies on terraform. Copilot only supports ECS whereas digger supports multiple targets such as EKS and others.
+
 ## Google Cloud Run
-## Terraform
+Digger template for Google Cloud Run coming soon.
+
+## Terraform, Cloudformation, Pulumi and IaC
+Modern IaC tools offer a one-to-one mapping for cloud resources. Digger leverages these tools under the hood to generate this infrastructure. But you can think of digger as one layer above spanning infrastructure, CI/CD, software releasing an monitoring. Since its a layer above, it makes your deployments agile since you are able to move from one infrastructure target to another with ease.
+
 ## Kubernetes
+Kubernetes abstracts the compute layer from hosts. If your stack is on kubernetes you can in theory move around between cloud providers with ease. But one thing you should take note of is that there is leaky abstractions as you start integrating natively with cloud provider services. For example, if you wish to use AWS SageMaker or Rekognition for ML, the abstractions start to leak and your application is no longer portable. Digger seeks to further minimise these cloud native abstractions to increase portability. Looking at it from another angel, digger template span managed kubernetes clusters such as EKS, GKE and AKE, as well as the resources around them.

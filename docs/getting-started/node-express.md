@@ -68,7 +68,7 @@ You may see 'Service Temporarily Unavailable' once you load the loadbalancer url
 ```
 dg env build production
 dg env push production
-dg service deploy production
+dg env deploy production
 ```
 You should see the URL pointing to your service's load balancer. That's it! 🙂
 

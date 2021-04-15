@@ -17,7 +17,8 @@ module.exports = {
           collapsable: false,
           children: [
             '/getting-started/installation',
-            '/getting-started/node-express'
+            '/getting-started/node-express',
+            '/getting-started/django'
           ]
         },
         {
