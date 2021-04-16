@@ -1,4 +1,5 @@
 # CLI reference
+Did you know that our CLI is open source? You can contribute bug reports and feature requests on github: https://github.com/diggerhq/cli
 
 ::: warning
 API is subject to change in future versions of the CLI.
