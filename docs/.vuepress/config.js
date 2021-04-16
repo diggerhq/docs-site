@@ -28,6 +28,15 @@ module.exports = {
             '/reference-cli',
             '/reference-yaml',
           ]
+        },
+        {
+          title: 'Miscellaneous',
+          collapsable: false,
+          children: [
+            '/misc/tagging-and-rollbacks',
+            '/misc/composing-terraform-templates',
+            '/misc/cicd',
+          ]
         }
       ]
     }
