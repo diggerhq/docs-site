@@ -7,7 +7,7 @@ You can see an example of this application deployed [here](https://todo-example.
 ![](https://i.imgur.com/lWZFxjn.png)
 
 ### Prerequisites
-- Digger CLI installed - see [installation guide](../installation)
+- Digger CLI installed - see [installation guide](/getting-started/installation.html)
 - Dockerfile - see the excellent [official guide](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/) how to dockerize your Node.js app
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) installed - we need to this to push your docker image!
 - You are logged into Digger - run `dg auth`
