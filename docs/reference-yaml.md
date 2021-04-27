@@ -21,6 +21,65 @@ services:
     container_port: 5000 # the port which the container listens in. NOTE this is the container port NOT the port exposed to the host
     health_check: /api/v1/hello # An unauthenticated path, required by loadbalancers
     dockerfile: ./Dockerfile # path to dockerfile relative to root repository
-    resources: {} # currently unused, in the future will indicate resources that the service needs such as databases
+    needs: [] # needs specifies
     dependencies: {} # currently unused, in the future will point to other services which this service depends on 
+```
+
+## Defining Resource dependencies
+
+Resources are specified under every service. here is an example where svcA needs one resource and svcB needs another database resource. Names in the spec have to be unique. 
+
+```
+services:
+    svcA:
+        service_name: 
+        service_path: 
+        needs:
+        - database:
+            name: x
+            engine: postgres
+            size: 10gb
+
+    svcB:
+        service_name:
+        service_path
+        needs:
+        - database:
+            name: y
+            engine: mysql
+            size: 30gb
+```
+
+Note that two services can optionally share the same resource. This will help reduce infrastructure creation time and the costs incurred. To share resources we can reference other resources using a dollar sign:
+
+
+```
+services:
+    svcA:
+        service_name: serviceA
+        service_path: ./
+        # ...
+        needs:
+        - database:
+            name: x1
+            engine: postgres
+            size: 10gb
+
+    svcB:
+        service_name: seviceB
+        service_path: ./serviceB
+        needs:
+        - database:
+            ref: $x1 #<-- database x1 is now accessible by svcB
+```
+
+## Using existing resources
+
+If you want to use existing resources and make them accessible by a service you can do that by specifying this in a top block called existing_resources. This is on a per-environment basis using {environment}.{resource_name} as the key and an arn value
+
+```
+existing_resources:
+    - production.mydb: arn_string
+    - staging: arn_string
+
 ```
