@@ -25,6 +25,15 @@ unzip dg-darwin-$VERSION.zip
 ln -s `pwd`/dg/dg /usr/local/bin/dg
 
 ```
+## Using Docker
+
+You can quickly test dg using docker with our official image. The command bellow will launch a docker container in the current directory and map the volume to its folder.
+
+```
+docker run -v ${PWD}:/code -it public.ecr.aws/g1x6q1x1/dg:latest sh
+
+dg --version
+```
 
 ## Test that it works
 ```

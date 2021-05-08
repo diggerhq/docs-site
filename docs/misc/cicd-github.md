@@ -1,4 +1,4 @@
-# CI/CD pipeline
+# CI/CD with Github
 
 You can use digger CLI within your CI/CD pipeline within your favourite tools such as Github Actions, CircliCI or TravicCI. In the snippet bellow we show an example of a github action which will release your service `svc1` on push. You can see a full GH workflow example in our [TODO example repository](https://github.com/diggerhq/django-todolist/blob/master/.github/workflows/deploy.yml)
 

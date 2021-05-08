@@ -35,7 +35,8 @@ module.exports = {
           children: [
             '/misc/tagging-and-rollbacks',
             '/misc/composing-terraform-templates',
-            '/misc/cicd',
+            '/misc/cicd-github',
+            '/misc/cicd-gitlab'
           ]
         }
       ]
