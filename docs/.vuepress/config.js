@@ -17,6 +17,7 @@ module.exports = {
           collapsable: false,
           children: [
             '/getting-started/installation',
+            '/getting-started/cicd',
             '/getting-started/node-express',
             '/getting-started/django'
           ]
@@ -35,8 +36,6 @@ module.exports = {
           children: [
             '/misc/tagging-and-rollbacks',
             '/misc/composing-terraform-templates',
-            '/misc/cicd-github',
-            '/misc/cicd-gitlab'
           ]
         }
       ]
