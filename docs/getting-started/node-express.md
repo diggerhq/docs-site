@@ -61,6 +61,10 @@ Digger will generate the infrastructure in your AWS account, so this step may ta
 You should see the URL pointing to your service's load balancer. By default this will not contain the node app but a default image that is deployed. To deploy the node application we need to create a release.
 
 ::: tip
+To see which resources are aboout to be created you can run `dg env plan production`. In general it is recommended to run this command before each apply. You can see the apply happening live by passing the `--verbose` option to it.
+:::
+
+::: tip
 You may see 'Service Temporarily Unavailable' once you load the loadbalancer url, its because the cluster is spinning up. In a few seconds it should show the default backend service.
 :::
 

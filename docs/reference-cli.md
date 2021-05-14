@@ -89,6 +89,24 @@ Helper to add a service to digger.yml. Will ask you for the path to the service 
 | `--aws-secret`              | The AWS secret of the account                                                                                            | No                |
 
 
+## dg env plan env_name
+- Requires Auth: yes
+- Context: digger.yml
+
+Outputs the list of planned resource that will be created for this environment. It is highly recommended to run this command before each apply.
+
+
+## dg env apply env_name
+- Requires Auth: yes
+- Context: digger.yml
+
+Applies the changes of the environment. Note: It is recommend to run a `dg plan` before `dg apply`.
+
+| Option                      | Description                                                                    | Required          |
+| --------------------------- | ------------------------------------------------------------------------------ | ----------------- |
+| `--verboose`                | Stream the terraform output while running the command                          | No                |
+
+
 ## dg env update env_name
 - Requires Auth: yes
 - Context: digger.yml
