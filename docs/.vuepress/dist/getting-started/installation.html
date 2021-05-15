@@ -8,7 +8,7 @@
     
     <meta name="description" content="">
     
-    <link rel="preload" href="/assets/css/0.styles.7ef1da3e.css" as="style"><link rel="preload" href="/assets/js/app.cab291b9.js" as="script"><link rel="preload" href="/assets/js/2.4167c022.js" as="script"><link rel="preload" href="/assets/js/10.0b38547d.js" as="script"><link rel="prefetch" href="/assets/js/11.4082ef0e.js"><link rel="prefetch" href="/assets/js/12.4d64877d.js"><link rel="prefetch" href="/assets/js/13.c5a7f934.js"><link rel="prefetch" href="/assets/js/14.8a039fda.js"><link rel="prefetch" href="/assets/js/15.7a637679.js"><link rel="prefetch" href="/assets/js/16.6e704ef5.js"><link rel="prefetch" href="/assets/js/17.3b20d3fc.js"><link rel="prefetch" href="/assets/js/18.4768cedc.js"><link rel="prefetch" href="/assets/js/3.22b45f90.js"><link rel="prefetch" href="/assets/js/4.a1a0064b.js"><link rel="prefetch" href="/assets/js/5.536ca2b6.js"><link rel="prefetch" href="/assets/js/6.0d1fdda2.js"><link rel="prefetch" href="/assets/js/7.e542ad6f.js"><link rel="prefetch" href="/assets/js/8.110afd94.js"><link rel="prefetch" href="/assets/js/9.e1480606.js">
+    <link rel="preload" href="/assets/css/0.styles.7ef1da3e.css" as="style"><link rel="preload" href="/assets/js/app.0f799027.js" as="script"><link rel="preload" href="/assets/js/2.4167c022.js" as="script"><link rel="preload" href="/assets/js/10.e6f694a3.js" as="script"><link rel="prefetch" href="/assets/js/11.4082ef0e.js"><link rel="prefetch" href="/assets/js/12.b38e8a67.js"><link rel="prefetch" href="/assets/js/13.a0ff7c41.js"><link rel="prefetch" href="/assets/js/14.c23535c1.js"><link rel="prefetch" href="/assets/js/15.72b7d3b4.js"><link rel="prefetch" href="/assets/js/16.899e46d6.js"><link rel="prefetch" href="/assets/js/17.d3250196.js"><link rel="prefetch" href="/assets/js/18.ef96afe2.js"><link rel="prefetch" href="/assets/js/3.22b45f90.js"><link rel="prefetch" href="/assets/js/4.a1a0064b.js"><link rel="prefetch" href="/assets/js/5.536ca2b6.js"><link rel="prefetch" href="/assets/js/6.4b8dea10.js"><link rel="prefetch" href="/assets/js/7.e542ad6f.js"><link rel="prefetch" href="/assets/js/8.033c7f0d.js"><link rel="prefetch" href="/assets/js/9.e1480606.js">
     <link rel="stylesheet" href="/assets/css/0.styles.7ef1da3e.css">
   </head>
   <body>
@@ -28,7 +28,7 @@ ln -s `pwd`/dg/dg /usr/local/bin/dg
 </code></pre></div><h2 id="using-docker"><a href="#using-docker" class="header-anchor">#</a> Using Docker</h2> <p>You can quickly test dg using docker with our official image. The command bellow will launch a docker container in the current directory and map the volume to its folder.</p> <div class="language- extra-class"><pre class="language-text"><code>docker run -v ${PWD}:/code -it public.ecr.aws/g1x6q1x1/dg:latest sh
 
 dg --version
-</code></pre></div><h2 id="test-that-it-works"><a href="#test-that-it-works" class="header-anchor">#</a> Test that it works</h2> <div class="language- extra-class"><pre class="language-text"><code>dg --version
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>since dg command uses docker internally, you may need to map your host machine's socks file so docker can reach the host daemon. This can be done using <code>docker run -v ${PWD}:/code -v /var/run/docker.sock:/var/run/docker.sock -it public.ecr.aws/g1x6q1x1/dg:latest sh</code></p></div> <h2 id="test-that-it-works"><a href="#test-that-it-works" class="header-anchor">#</a> Test that it works</h2> <div class="language- extra-class"><pre class="language-text"><code>dg --version
 </code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
       ←
       <a href="/overview/digger-vs-other.html" class="prev">
@@ -38,6 +38,6 @@ dg --version
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.cab291b9.js" defer></script><script src="/assets/js/2.4167c022.js" defer></script><script src="/assets/js/10.0b38547d.js" defer></script>
+    <script src="/assets/js/app.0f799027.js" defer></script><script src="/assets/js/2.4167c022.js" defer></script><script src="/assets/js/10.e6f694a3.js" defer></script>
   </body>
 </html>

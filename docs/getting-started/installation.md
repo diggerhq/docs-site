@@ -35,6 +35,10 @@ docker run -v ${PWD}:/code -it public.ecr.aws/g1x6q1x1/dg:latest sh
 dg --version
 ```
 
+::: tip
+since dg command uses docker internally, you may need to map your host machine's socks file so docker can reach the host daemon. This can be done using `docker run -v ${PWD}:/code -v /var/run/docker.sock:/var/run/docker.sock -it public.ecr.aws/g1x6q1x1/dg:latest sh`
+:::
+
 ## Test that it works
 ```
 dg --version
