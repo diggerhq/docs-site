@@ -19,7 +19,8 @@ module.exports = {
             '/getting-started/installation',
             '/getting-started/cicd',
             '/getting-started/node-express',
-            '/getting-started/django'
+            '/getting-started/django',
+            '/getting-started/secrets'
           ]
         },
         {
