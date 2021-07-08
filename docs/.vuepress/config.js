@@ -9,7 +9,8 @@ module.exports = {
           children: [
             '/',
             '/overview/concepts',
-            '/overview/digger-vs-other',
+            '/overview/technical-design',
+            '/overview/digger-vs-other'
           ]
         },
         {
@@ -19,7 +20,7 @@ module.exports = {
             '/getting-started/installation',
             '/getting-started/cicd',
             '/getting-started/node-express',
-            '/getting-started/django',
+          '/getting-started/django',
             '/getting-started/secrets'
           ]
         },
