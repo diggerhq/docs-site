@@ -15,14 +15,23 @@ module.exports = {
           ]
         },
         {
-          title: 'Getting Started',
+          title: 'Get Started',
           collapsable: false,
+          sidebarDepth: 0,
           children: [
             '/getting-started/installation',
-            '/getting-started/cicd',
             '/getting-started/node-express',
             '/getting-started/django',
             '/getting-started/secrets'
+          ]
+        },
+        {
+          title: 'Customize',
+          collapsable: false,
+          sidebarDepth: 1,
+          children: [
+            '/customize/terraform',
+            '/customize/cicd',
           ]
         },
         {
