@@ -15,7 +15,7 @@ This is the preferred way to build custom infrastructure with Digger unless you 
 Terraform overrides require a connected Infrastructure Repository. You can do that in Settings.
 :::
 
-To add ad custom Terraform, simply push a fulder named `_digger_custom` into your Infrastructure Repository. If you want your Terraform to be rendered in all environments, put it into the `_shared` subfolder. And if it's for one environment only, put it into a subfolder named `environment-{environmentId}`. Digger will pick up changes from it and render your Terraform alongside the target defaults. If the name of a resource in your code is the same as in Digger-generated code (it's in the same repository), Digger will ignore the generated resource and render yours instead.
+To add ad custom Terraform, simply push a fulder named `_digger_custom` into the `digger` branch of your Infrastructure Repository. If you want your Terraform to be rendered in all environments, put it into the `_shared` subfolder. And if it's for one environment only, put it into a subfolder named `environment-{environmentId}`. Digger will pick up changes from it and render your Terraform alongside the target defaults.
 
 Example folder structure in the Infrastructure Repository:
 
