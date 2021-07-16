@@ -8,15 +8,21 @@ Generating IaC allows Digger to escape the "curse of PaaS" – inevitably teams 
 
 With Digger, that will never happen – you have access to the full power of AWS from day 1 and can customise what you need when you need it. You can even build your infrastructure entirely by hand and still benefit from the centralised state management provided by Digger.
 
+### Technical design
+
 The problem with infrastructure-as-code today (Terraform, CloudFormation, CDK, Pulumi, etc) is that it is not reusable. That is because implementation, configuration and interface are mixed up together. There is no way to build something without thinking of the low-level implementation details. It's like an assembly language, that's why it is so hard.
 
-To address this, Digger introduces some new concepts:
+To address this, Digger introduces some new [Concepts](./concepts):
 
-- **Services** (containers, functions, webapps) - deployable pieces of your code
+- **Services** (containers, functions, webapps) - your containers, functions, webapps - basically your application code that can be deployed somewhere and needs supporting infrastructure
 
-- **Resources** (databases, object storage, queues, etc) - infrastructure dependencies required by Services. For example, "postgres 12 database". Services and Resources form the *logical* structure of your stack. We call it "infrastructure interface" - what your code needs from the infrastructure
+- **Resources** (databases, object storage, queues, etc) - infrastructure dependencies required by Services. For example, "postgres 12 database".
+
+Services and Resources form the *logical* structure of your stack. We call it "infrastructure interface" - what your code needs from the infrastructure
 
 - **Environments** - isolated independent copies of your entire stack. Each Environment has Configuration that defines the specific *implementation* of infrastructure supporting your code. For example, your Dev environment could be a small EC2 box with docker-compose, and Production could run in a dedicated Kubernetes cluster with multi-AZ RDS. Services and Resources can be configured independently for each environment.
+
+- **Targets** - generic templates that generate specific implementation (Terraform) for each environment. Each Target can support a wide variety of stacks. More in [Understanding Targets](./understanding-targets)
 
 Digger takes the logical structure of your stack, combines it with environment configuration, generates infrastructure-as-code and runs it on the backend, updating resources in your AWS account. It then exports generated Terraform into a designated repository of your choice. You can put your custom Terraform in there too and Digger will pick it up. So you can have it entirely your way if you'd like.
 
