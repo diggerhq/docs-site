@@ -6,10 +6,11 @@ module.exports = {
         {
           title: 'Overview',
           collapsable: false,
+          sidebarDepth: 0,
           children: [
             '/',
             '/overview/concepts',
-            '/overview/technical-design',
+            '/overview/how-it-works',
             '/overview/digger-vs-other'
           ]
         },
@@ -20,7 +21,7 @@ module.exports = {
             '/getting-started/installation',
             '/getting-started/cicd',
             '/getting-started/node-express',
-          '/getting-started/django',
+            '/getting-started/django',
             '/getting-started/secrets'
           ]
         },

@@ -1,4 +1,8 @@
-# Technical Design
+# How It Works
+
+Unlike traditional PaaS like Vercel or Heroku, Digger is not hosting your code on Digger servers. Instead, it manages your cloud account (AWS, GCP, Azure) through infrastructure-as-code. It generates Terraform and runs it on Digger servers. Terraform is the industry standard for all things DevOps. This allows Digger to escape the "curse of PaaS" – inevitably every team needs something that a simplified platform cannot provide. So they start building more and more on AWS directly, and either lose all the PaaS benefits or end up recreating it in-house.
+
+You can think of Digger as a "compiler" that takes the infrastructure needs of your applications and services as input and produces Terraform as output.
 
 The problem with infrastructure-as-code today (Terraform, CloudFormation, CDK, Pulumi, etc) is that it is not reusable. That is because implementation, configuration and interface are mixed up together. There is no way to build something without thinking of the low-level implementation details. It's like an assembly language, that's why it is so hard.
 
