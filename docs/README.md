@@ -1,28 +1,27 @@
 # Introduction
 
-Cloud infrastructure is frustratingly complex. AWS especially so:
-![Periodic table of AWS](./img/aws-periodic-table.jpg)
+There's something strange in the way we build software products today:
+![Tools you love: Vercel, Heroku, Firebase, Netlify; Tools you use at work: AWS, GCP, Azure](./img/tools-you-love-vs-use-at-work.png)
 
-Which of the [200 and counting](https://aws.amazon.com/products/) services do I need? How do I configure them? Without prior DevOps expertise it can take days if not weeks of trial and error to set up a stack on AWS.
+Cloud providers like AWS are extremely complex. Without prior DevOps expertise it can take many days to set up. There are great "no-ops" platforms like Vercel and Heroku out there, but their use is limited to small projects. Most teams keep building on AWS, GCP or Azure – because they know that eventually they will need some of the 200+ services that only big cloud providers have.
 
-Then why not start on something simple like Heroku and only move to AWS if and when you need to? Short answer: that's easier said than done, check out [Digger vs Other](./digger-vs-other) for an overview of alternatives.
+That's very wrong. You are forced to choose between great developer experience and building a future-proof stack. Imagine if mobile developers needed one set of tools to _start_ building an app, and had to rebuild it with entirely different tools after a year or so – wouldn't that be ridiculous?
 
 
-## What is Digger
-Digger configures and manages your AWS account, so you don't have to.
+## Digger makes AWS simple
+It automatically generates infrastructure for your code in your AWS account.
+So you can build on AWS without having to deal with its complexity.
 
-With Digger CLI and Web UI, you can:
-- Set up a full stack on AWS in minutes, check out [Quick Start](./quickstart-server)
-- Run anything - web apps, microservices, static sites - in your AWS account
-- Deploy on every git push (CI) without writing a single line of configuration
-- Manage multiple environments and configurations in different regions
-- Customise every bit with Terraform templates
+You can launch in minutes and get a future-proof stack at the same time. No need to build from scratch, or even think of infrastructure at all
 
-## How it works
-Digger is your swiss-army knife for setting up, deploying and monitoring your infrastructure. We are starting with containerised apps but there is a lot more features in the pipeline. We like to think of Digger as the glue that connects your app to the underlying infrastructure it needs to run on. Let's take a quick example of a container that needs to run on AWS. You have the choice of deploying it directly to EC2, or AWS ECS or AWS EKS. And under AWS ECS there is multiple options such as ECS classic or ECS fargate. 
+- ✅ Easy to use Web UI + powerful CLI
+- ✅ Deploy webapps, serverless functions and databases: just connect GitHub repositories
+- ✅ Multiple environments: replicate your entire stack in a few clicks. Dev / staging / production; short-lived for testing; per-customer
+- ✅ Zero-configuration CI with GitOps: pick a branch for each environment and your services will be deployed on every git push
+- ✅ Logs, environment variables, secrets, domains: never touch AWS again!
 
-You also have to choose a registry to host your image, examples dockerhub or Amazon ECR. Once you have made decisions about registry and target (ECS), you then need to architect your system including VPCs, security groups, roles and load balancer. Next you need to setup the resources which your service requires like RDS, a Queue, Email service etc.
+## You keep the full power of AWS
 
-Digger heavylifts these decisions for you by offering a library of opinionated targets to chose from. In other words, you hand us your container and we will take care of setting up your infrastructure. But we don't stop here. Digger will also take care of exposing the right environment variables so your app works out of the box. Digger then controls your release cycle so you can build-push-release also using digger commands! 
+Traditional PaaS like Heroku or Vercel run your code on their servers. Digger takes a different approach: it generates infrastructure-as-code (Terraform) that in turn configures your AWS account.
 
-Therefore if you decide to change your mind and move from ECS to EKS we got you covered!
+Digger is quick and simple for the most common scenarios, but there are no limitations on what you can build with Digger. Terraform is industry standard for all things DevOps; you can customise it or even use your own templates with Digger. So unlike with PaaS, you never outgrow Digger - because you get a future-proof stack from day 1.

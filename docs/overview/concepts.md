@@ -1,3 +1,7 @@
+---
+sideBarDepth: 2
+---
+
 # Concepts
 Digger introduces a simple yet powerful model that works well for large enterprise stacks, small SaaS products, and everything in between.
 ## Project
