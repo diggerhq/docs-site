@@ -1,6 +1,10 @@
 # How It Works
 
-Unlike traditional PaaS like Vercel or Heroku, Digger is not hosting your code on Digger servers. Instead, it manages your cloud account (AWS, GCP, Azure) through infrastructure-as-code. It generates Terraform and runs it on Digger servers. Terraform is the industry standard for all things DevOps. This allows Digger to escape the "curse of PaaS" – inevitably every team needs something that a simplified platform cannot provide. So they start building more and more on AWS directly, and either lose all the PaaS benefits or end up recreating it in-house.
+Unlike traditional PaaS like Vercel or Heroku, Digger is not hosting your code on Digger servers. Instead, it manages your cloud account (AWS, GCP, Azure) through infrastructure-as-code. It generates Terraform and runs it on Digger servers. Terraform is the industry standard for all things DevOps.
+
+Generating IaC allows Digger to escape the "curse of PaaS" – inevitably teams need something that a simplified platform cannot provide. They start building more and more on AWS directly, and either lose all the PaaS benefits or end up recreating it in-house.
+
+With Digger, that will never happen – you have access to the full power of AWS from day 1 and can customise what you need when you need it. You can even build your infrastructure entirely by hand and still benefit from the centralised state management provided by Digger.
 
 You can think of Digger as a "compiler" that takes the infrastructure needs of your applications and services as input and produces Terraform as output.
 
