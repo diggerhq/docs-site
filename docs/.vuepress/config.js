@@ -11,7 +11,8 @@ module.exports = {
             '/',
             '/overview/concepts',
             '/overview/how-it-works',
-            '/overview/digger-vs-other'
+            '/overview/understanding-targets',
+            '/overview/digger-vs-other',
           ]
         },
         {
@@ -19,10 +20,17 @@ module.exports = {
           collapsable: false,
           sidebarDepth: 0,
           children: [
-            '/getting-started/installation',
-            '/getting-started/node-express',
-            '/getting-started/django',
-            '/getting-started/secrets'
+            '/getting-started/secrets',
+          ]
+        },
+        {
+          title: 'CLI',
+          collapsable: false,
+          sidebarDepth: 0,
+          children: [
+            '/cli/installation',
+            '/cli/node-express',
+            '/cli/django',
           ]
         },
         {
@@ -37,6 +45,7 @@ module.exports = {
         {
           title: 'Reference',
           collapsable: false,
+          sidebarDepth: 0,
           children: [
             '/reference-cli',
             '/reference-yaml',
@@ -47,7 +56,6 @@ module.exports = {
           collapsable: false,
           children: [
             '/misc/tagging-and-rollbacks',
-            '/misc/composing-terraform-templates',
           ]
         }
       ]

@@ -1,4 +1,4 @@
-# Run a Django app
+# Deploy Django app with CLI
 This guide shows how to get a Django app running in your AWS account with Digger
 We are going to deploy this [TODO list application](https://github.com/diggerhq/django-todolist). This application needs a database for deployment. This specific application does not need celery and hence we don't need to create a queue or a sparate service for background workers.
 

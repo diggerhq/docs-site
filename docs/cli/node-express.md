@@ -1,4 +1,4 @@
-# Run a Node.js app
+# Deploy Node app with CLI
 This guide shows how to get a Node.js Express app running in your AWS account with Digger
 We are going to deploy this [sample application](https://github.com/diggerhq/digger-examples/tree/master/node-service) from the Digger Samples repository on GitHub.
 It is a Node.js Express application created with the official [Express Generator](https://expressjs.com/en/starter/generator.html), structured like this:
