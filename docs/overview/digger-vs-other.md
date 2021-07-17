@@ -1,4 +1,14 @@
 # Digger vs Other
+
+All other platforms on the market today give you **only one** of the two:
+
+- great developer experience and ease of use so you can move fast
+- great power and flexibility so you can build anything
+
+Digger gives you **both**, because under the hood it generates infrastructure-as-code (Terraform) and manages your cloud account through it.
+
+It is quick and simple for common use cases, and you can customise whatever you need whenever you need it, because with Digger you retain access to the full power of AWS.
+
 ## Heroku and other PaaS
 Platforms-as-a-service (PaaS) like [Heroku](https://heroku.com), [Render](https://render.com) or [Digital Ocean App Platform](https://www.digitalocean.com/products/app-platform) are a great choice if you just need to get your code up and running and don't want to spend time thinking of infrastructure.
 
