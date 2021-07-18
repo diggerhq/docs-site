@@ -45,9 +45,19 @@ These are platforms optimised for JAMStack, static sites and front-end JavaScrip
 
 **AWS Lightsail** is a Virtual Private Server pre-configured by Amazon, similar to a Droplet by Digital Ocean. Before cloud services became popular, you'd rent a VPS from a hosting provider and install everything onto it yourself. Still handy for things like Wordpress, although in 2021 it is probably better to use a managed Wordpress provider like Kinsta or WP Engine.
 
-## Terraform, Cloudformation, Pulumi and IaC
+## Infrastructure-as-code
 
-Modern IaC tools offer a one-to-one mapping for cloud resources. Digger leverages these tools under the hood to generate this infrastructure. But you can think of digger as one layer above spanning infrastructure, CI/CD, software releasing an monitoring. Since its a layer above, it makes your deployments agile since you are able to move from one infrastructure target to another with ease.
+**Terraform** is an open-source tool by Hashicorp and the most popular infrastructure-as-code tool in the DevOps community. **Digger uses Terraform**, so it is not correct to compare Digger to Terraform. You can think of Digger as a "compiler" that outputs Terraform. It's completely customisable and you can use your own templates - see [Write your own Terraform](../customize/terraform)
+
+**Cloud Formation** was the first infrastructure-as-code tool by Amazon, released in 2011. It is not open source and only supports AWS. Despite its verbose syntax it is still widely used.
+
+**AWS CDK** is the newer set of infrastructure-as-code tools by Amazon. It allows to define infrastructure on AWS using languages like JavaScript and Python. Under the hood it produces CloudFormation templates.
+
+**Pulumi** like CDK also allows to define infrastructure in familiar languages like JavaScript and Python. But unlike CDK it can work with different cloud providers, not just AWS.
+
+**The common problem** of all these tools is that they are low-level, and therefore not reusable. They force you to be aware of all the implementation details. Terraform itself is a very simple language; the hard part is learning all the AWS concepts like VPCs, ACLs, IAM, security groups etc.
+
+This is why we designed Digger as an _optional_ abstraction on top of Terraform, the most popular open-source infrastructure-as-code tool.
 
 ## Kubernetes
 Kubernetes abstracts the compute layer from hosts. If your stack is on kubernetes you can in theory move around between cloud providers with ease. But one thing you should take note of is that there is leaky abstractions as you start integrating natively with cloud provider services. For example, if you wish to use AWS SageMaker or Rekognition for ML, the abstractions start to leak and your application is no longer portable. Digger seeks to further minimise these cloud native abstractions to increase portability. Looking at it from another angel, digger template span managed kubernetes clusters such as EKS, GKE and AKE, as well as the resources around them.
