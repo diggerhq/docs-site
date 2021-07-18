@@ -1,5 +1,5 @@
 ---
-sideBarDepth: 2
+sidebarDepth: 1
 ---
 
 # Concepts

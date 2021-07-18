@@ -11,7 +11,6 @@ module.exports = {
             '/',
             '/overview/concepts',
             '/overview/how-it-works',
-            '/overview/understanding-targets',
             '/overview/digger-vs-other',
           ]
         },

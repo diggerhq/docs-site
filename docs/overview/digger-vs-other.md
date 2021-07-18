@@ -1,3 +1,6 @@
+---
+sidebarDepth: 1
+---
 # Digger vs Other
 
 Existing cloud platforms on the market today give you one of the two:
