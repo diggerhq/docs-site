@@ -1,18 +1,20 @@
 # Digger vs Other
 
-All other platforms on the market today give you **only one** of the two:
+Existing cloud platforms on the market today give you one of the two:
 
-- great developer experience and ease of use so you can move fast
-- great power and flexibility so you can build anything
+- **Either** great developer experience and ease of use so you can move fast
+- **Or** power and flexibility so you can build a future-proof stack
 
 Digger gives you **both**, because under the hood it generates infrastructure-as-code (Terraform) and manages your cloud account through it.
 
-It is quick and simple for common use cases, and you can customise whatever you need whenever you need it, because with Digger you retain access to the full power of AWS.
+It is quick and simple for common use cases, and you can customise every bit whenever you need it. Because with Digger you retain access to the full power of AWS.
 
-## Heroku and other PaaS
-Platforms-as-a-service (PaaS) like [Heroku](https://heroku.com), [Render](https://render.com) or [Digital Ocean App Platform](https://www.digitalocean.com/products/app-platform) are a great choice if you just need to get your code up and running and don't want to spend time thinking of infrastructure.
+## Heroku and other platforms-as-a-service
+PaaS like Heroku or Digital Ocean App Platform run your code on their servers and provide you with an easy to use web interface to manage your application. They completely hide the infrastructure complexity from you. So you can start quickly and move fast using a PaaS. This is great.
 
-But the simplicity of PaaS comes with higher costs and a hard limit on what you can build. It is fairly typical for startups to quickly outgrow a PaaS and then expend dispropotionate effort to migrate to a major cloud provider like AWS.
+But platforms-as-a-service offer fewer services than big cloud providers and you don't have access to the lower infrastructure level. Teams tend to outgorw it quickly and have to migrate. PaaS also can be 2x - 5x more expensive than AWS, and do not give you as much free credits as big cloud providers.
+
+Digger gives you the benefits of a PaaS without the downsides. It looks and feels like a PaaS, so you can start quickly and move fast. But because Digger manages your cloud account through infrastructure-as-code, you have full access to the underlying infrastructure. You can extend and customise every bit as and when you need to, so you never outgrow Digger.
 
 |                             | AWS managed by Digger   | Heroku            |
 | --------------------------- | ----------------------- | ----------------- |
@@ -29,14 +31,17 @@ But the simplicity of PaaS comes with higher costs and a hard limit on what you 
 | Serverless                  | Yes                     | No                |
 | Data stays in your cloud    | Yes                     | No                |
 
-::: tip
-If your project is small and likely to stay so (think a single web app for a hackathon or a side project) you probably don't need AWS at all – consider using a PaaS instead.
-:::
+## Firebase and other backends-as-a-service platforms
 
-## Netlify, Vercel, Firebase Hosting 
-These are great specialised platforms optimised for static sites and single-page JavaScript applications.
-They don't offer much on the backend side beyond basic serverless functions.
-But if that's all you need then AWS might be an overkill, and these platforms are a pleasure to work with!
+Tools like Firebase, Supabase or Nhost provide a set of drop-in components for your backend: database, serverless functions, storage, authentication. Unlike Heroku, you don't deploy your backend to Firebase – you configure it so it *is* your backend. That's easier and less maintenance than PaaS. It is also even more limiting.
+
+Digger is more flexible. You can create functions and databases in Digger UI in just a few clicks, so it is just as easy. But under the hood the databases are RDS instances and functions are Lambdas, and you have access to their full configuration.
+
+Digger also supports containers, queues and a wide variety of other AWS services. So you can start simple and gradually increase complexity of your stack as your needs evolve.
+
+## Vercel and Netlify
+
+These are platforms optimised for JAMStack, static sites and front-end JavaScript applications. They also provide simple serverless functions. They are a great choice for small front-end projects with little to no backend complexity.
 
 ## AWS Lightsail
 Lightsail is your Virtual Private Server pre-configured by Amazon, a rough equivalent of a Droplet by Digital Ocean. This is how web development was done in the pre-cloud era, before the modern approaches to scalability and observability were established. You get a Linux or Windows virtual machine running on Amazon servers, SSH into it and do whatever you want. You can install as many web servers or databases as you want and this can be very cost-efficient. But the burden of maintenance, backups and troubleshooting is also all yours. While this is *not* the way you want to build your production stack in 2021, Lightsail remains a great tool for experimentation and unassuming projects.  
