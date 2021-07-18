@@ -60,7 +60,12 @@ These are platforms optimised for JAMStack, static sites and front-end JavaScrip
 This is why we designed Digger as an _optional_ abstraction on top of Terraform, the most popular open-source infrastructure-as-code tool.
 
 ## Kubernetes
-Kubernetes abstracts the compute layer from hosts. If your stack is on kubernetes you can in theory move around between cloud providers with ease. But one thing you should take note of is that there is leaky abstractions as you start integrating natively with cloud provider services. For example, if you wish to use AWS SageMaker or Rekognition for ML, the abstractions start to leak and your application is no longer portable. Digger seeks to further minimise these cloud native abstractions to increase portability. Looking at it from another angel, digger template span managed kubernetes clusters such as EKS, GKE and AKE, as well as the resources around them.
+
+Kubernetes is the de-facto standard for container orchestration. Originally created by Google, today managed Kubernetes is offered by every cloud provider. In a nutshell, Kubernetes takes care of resource allocation, networking and load balancing for your containers. If your stack has many microsercices (say 15 or more) then you probably want to run it on Kubernetes.
+
+It is not correct to compare Digger with Kubernetes, because **Digger supports Kubernetes**. You can easily provision a Kubernetes cluster with Digger by simply using a different [Target](./understanding-targets).
+
+Container orchestration engine is just one part of your stack. Others include webapps, storage, databases, queues, caches, etc etc. Digger manages your _entire_ stack. You can use Kubernetes as your orchestration engine, or you can choose something else. The default target in Digger is ECS Fargate because if you are just starting out then Kubernetes can be an overkill in terms of both complexity and cost. All you need to do to switch to Kubernetes in Digger is create a new environment and select a different target.
 
 ----------
 
