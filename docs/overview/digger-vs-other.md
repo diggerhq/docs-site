@@ -61,7 +61,7 @@ This is why we designed Digger as an _optional_ abstraction on top of Terraform,
 
 ## Kubernetes
 
-Kubernetes is the de-facto standard for container orchestration. Originally created by Google, today managed Kubernetes is offered by every cloud provider. In a nutshell, Kubernetes takes care of resource allocation, networking and load balancing for your containers. If your stack has many microsercices (say 15 or more) then you probably want to run it on Kubernetes.
+Kubernetes is the de-facto standard for container orchestration. Originally created by Google, today managed Kubernetes is offered by every cloud provider. In a nutshell, Kubernetes takes care of resource allocation, networking and load balancing for your containers. If your stack has many microservices (say 15 or more) then you probably want to run it on Kubernetes.
 
 It is not correct to compare Digger with Kubernetes, because **Digger supports Kubernetes**. You can easily provision a Kubernetes cluster with Digger by simply using a different [Target](./understanding-targets). The default target in Digger is ECS Fargate because if you are just starting out then Kubernetes can be an overkill in terms of both complexity and cost.
 
