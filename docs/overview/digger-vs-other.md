@@ -70,6 +70,12 @@ It is not correct to compare Digger with Kubernetes, because **Digger supports K
 
 Container orchestration engine is just one part of your stack. Others include webapps, storage, databases, queues, caches, etc etc. Digger manages your _entire_ stack. You can use Kubernetes as your orchestration engine, or you can choose something else. All you need to do to switch orchestration engines in Digger is create a new environment and select a different target.
 
+## Serverless
+
+This is a loaded term :)
+
+**Serverless computing** is a way of running code without any fixed capacity
+
 ----------
 
 ### Digger vs Heroku feature comparison
