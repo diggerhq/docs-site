@@ -40,7 +40,9 @@ These are platforms optimised for JAMStack, static sites and front-end JavaScrip
 
 ## Simplified services by AWS
 
-**AWS Elastic Beanstalk** is a platfrom-as-a-service by AWS, their answer to Heroku. It was released in 2011 and did not change much since then. It is completely segregated from other AWS services and does not take advantage of modern technologies like containers or serverless. If you need a PaaS there there is little reason to choose Beanstalk over Heroku or Digital Ocean today.
+**AWS Elastic Beanstalk** is the original platfrom-as-a-service by AWS, their answer to Heroku in 2011. It did not change much since then. Beanstalk is completely segregated from other AWS services and does not take advantage of modern technologies like containers or serverless. If you need a PaaS there there is little reason to choose Beanstalk over Heroku, AWS AppRunner or Digital Ocean today.
+
+**AWS AppRunner** is a newer platform-as-a-service by AWS that support containers and zero-configuration CI/CD, similar to Heroku today. Like Heroku it is a black box that does not give you control over the internals, so you will need to rebuild your stack eventually. That's not the case with Digger because it generates Terraform and allows you to customise it. AppRunner costs 50% more compared to ECS Fargate that both Digger and AppRunner use under the hood to run containers. And you can configure Digger to use even more cost-effective options like docker-compose on EC2.
 
 **AWS Amplify** is a frontend-centric service by AWS, similar to Netlify or Vercel. Just like these tools, Amlify is great if your project is small and mostly front-end.
 
