@@ -76,7 +76,11 @@ Container orchestration engine is just one part of your stack. Others include we
 
 This is a loaded term :)
 
-**Serverless computing** is a way of running code without any fixed capacity
+**Serverless computing** is a way of running code on-demand, without any fixed compute resources (servers) permanently allocated. AWS Lambda is the first and the most well-known implementation. Digger fully supports AWS Lambda, and therefore Serverless model too.
+
+**Serverless Framework** is an open-source tool that makes it easier to configure serverless infrastructure. You can describe your functions and supporting infrastructure in yaml files (components) and Serverless Framework will set it up in your AWS account. Digger takes a similar approach; you can also describe your infrastructure in the digger.yml and digger.config.yml files. But Digger isn't limited only to Lambdas, or indeed to any particular way of setting up your stack. It supports containers, webapps, databases, etc. It takes a [Target](./understanding-targets), generates Terraform from it, and gives it back to you. This means that Digger supports literally everything that AWS has to offer. The most common things are as easy as click a button in the UI; for other things you'd need to write some config like with Serverless; for everything else you can [Write your own Terraform](../customize/terraform).
+
+**Serverless.com** is a web UI of the Serverless Framework. Similarly to Digger, it manages your AWS account from its backend.
 
 ----------
 
