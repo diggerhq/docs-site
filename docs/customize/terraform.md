@@ -55,7 +55,7 @@ At the moment custom targets are only supported in the CLI but not in Web UI. Yo
 Template structure is subject to changing in future versions of digger
 :::
 
-Digger Targets are not much different from standard terraform. We use jinja2 under the hood to pass configuration parameters to these templates. The flow is summarised in the visual bellow. Options flow from the digger.yml, along with additional environment options, directly into a template store in a github repository. These are used to render terraform which can be applied in the user's account.
+Digger Targets are not much different from standard terraform. We use jinja2 under the hood to pass configuration parameters to these templates. The flow is summarised in the visual bellow. Options flow from the digger.yml, along with additional environment options, directly into a template store in a GitHub repository. These are used to render terraform which can be applied in the user's account.
 
 The directory structure of digger templates looks similar to terraform. We run the main files under the `main/` directory. You can see an example terraform template for fargate in this [example repository](https://github.com/diggerhq/target-fargate/tree/example)
 
@@ -74,11 +74,9 @@ Bellow the main components of a digger templates are explained:
 
 **main/**: The terraform apply command is run in this context and hence all the .tf files will be included in the generated infrastructure. Any file with the suffix "\*.template.tf" is rendered to a .tf file before the apply and therefore you can use standard jinja template tags {{}} in these files.
 
-
 **service.template.tf**: This is a special file that is rendered multiple times for each service entry in the digger.yml file. For example, if we have two services svc1 and svc2, we will end up with service-svc1.tf and service-svc2.tf. Each file will be able to use the service options as standard {{}} jinja templates.
 
 **module/**: you can use either local or remote modules as supported by terraform. For local modules you can have these as sister folders and refer to them directly.
-
 
 ### Using Terraform variables
 
@@ -96,7 +94,7 @@ Any output which starts `DGVAR_` prefix will be mapped to an environment variabl
 
 To integrate with Parameter store secrets, create an entry of the secret value and then output the value of it using `DGVAR_` prefix as mentioned above. Here is an example: [database password](https://github.com/diggerhq/target-fargate/blob/example/main/database.template.tf#L43) in parameter store mapped to [outputs](https://github.com/diggerhq/target-fargate/blob/example/main/outputs.template.tf#L40) using its arn value:
 
-```
+```bash
 resource "aws_ssm_parameter" "database_password" {
     name = "${var.app}.${var.environment}.rds.database_password"
     value = local.database_password
@@ -116,9 +114,9 @@ output "DGVAR_POSTGRES_PASSWORD" {
 
 Some resources such as S3 buckets have to be unique globally. In addition, we want to avoid having naming conflicts of resources such as ECS clusters.
 
-In Digger, project names are unique globally. Therefore if you want to gaurantee unique names of your resources across environments is to use project_name_environment_name patterns. With that said, many terraform resources also support a name_prefix attribute which gaurantee uniqueness. It is good to make use of this name_prefix attribute to avoid problems since in this case terraform will gaurantee a unique resource on your behalf:
+In Digger, project names are unique globally. Therefore if you want to guarantee unique names of your resources across environments is to use project_name_environment_name patterns. With that said, many terraform resources also support a name_prefix attribute which guarantee uniqueness. It is good to make use of this name_prefix attribute to avoid problems since in this case terraform will guarantee a unique resource on your behalf:
 
-```
+```bash
 resource "aws_s3_bucket" "b" {
   bucket_prefix = "my-dg-test-bucket"
   acl    = "private"
