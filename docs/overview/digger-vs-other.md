@@ -1,6 +1,7 @@
 ---
 sidebarDepth: 1
 ---
+
 # Digger vs Other
 
 Existing cloud platforms on the market today give you one of the two:
@@ -10,16 +11,16 @@ Existing cloud platforms on the market today give you one of the two:
 
 Digger gives you **both**, because under the hood it generates infrastructure-as-code (Terraform) and manages your cloud account through it.
 
-|                             | AWS / GCP / Azure       | Heroku & PaaS     | Firebase & BaaS | Digger + AWS
-| --------------------------- | ----------------------- | ----------------- |-----------------|--------------
-| Ease of use & DX            | -                       | ++                | ++++            | ++++
-| Power & flexibility         | ++++                    | -                 | --              | ++++
-| Cost                        | $                       | $$$$              | $$$$            | $
-
+|                     | AWS / GCP / Azure | Heroku & PaaS | Firebase & BaaS | Digger + AWS |
+| ------------------- | ----------------- | ------------- | --------------- | ------------ |
+| Ease of use & DX    | -                 | ++            | ++++            | ++++         |
+| Power & flexibility | ++++              | -             | --              | ++++         |
+| Cost                | $                 | $$$$          | $$$$            | $            |
 
 Digger is quick to start and easy to use, but you can also customise every bit whenever you need it because the full power of AWS is still accessible.
 
 ## Heroku and other platforms-as-a-service
+
 PaaS like Heroku or Digital Ocean App Platform run your code on their servers and provide you with an easy to use web interface to manage your application. They completely hide the infrastructure complexity from you. So you can start quickly and move fast using a PaaS. This is great.
 
 But platforms-as-a-service offer fewer services than big cloud providers and you don't have access to the lower infrastructure level. Teams tend to outgorw it quickly and have to migrate. PaaS also can be 2x - 5x more expensive than AWS, and do not give you as much free credits as big cloud providers.
@@ -28,7 +29,7 @@ Digger gives you the benefits of a PaaS without the downsides. It looks and feel
 
 ## Firebase and other backend-as-a-service platforms
 
-Tools like Firebase, Supabase or Nhost provide a set of drop-in components for your backend: database, serverless functions, storage, authentication. Unlike Heroku, you don't deploy your backend to Firebase – you configure it so it *is* your backend. That's easier and less maintenance than PaaS. It is also even more limiting.
+Tools like Firebase, Supabase or Nhost provide a set of drop-in components for your backend: database, serverless functions, storage, authentication. Unlike Heroku, you don't deploy your backend to Firebase – you configure it so it _is_ your backend. That's easier and less maintenance than PaaS. It is also even more limiting.
 
 Digger is more flexible. You can create functions and databases in Digger UI in just a few clicks, so it is just as easy. But under the hood the databases are RDS instances and functions are Lambdas, and you have access to their full configuration.
 
@@ -70,7 +71,7 @@ Kubernetes is the de-facto standard for container orchestration. Originally crea
 
 It is not correct to compare Digger with Kubernetes, because **Digger supports Kubernetes**. You can easily provision a Kubernetes cluster with Digger by simply using a different [Target](./understanding-targets). The default target in Digger is ECS Fargate because if you are just starting out then Kubernetes can be an overkill in terms of both complexity and cost.
 
-Container orchestration engine is just one part of your stack. Others include webapps, storage, databases, queues, caches, etc etc. Digger manages your _entire_ stack. You can use Kubernetes as your orchestration engine, or you can choose something else. All you need to do to switch orchestration engines in Digger is create a new environment and select a different target.
+Container orchestration engine is just one part of your stack. Others include webapps, storage, databases, queues, caches, etc. Digger manages your _entire_ stack. You can use Kubernetes as your orchestration engine, or you can choose something else. All you need to do to switch orchestration engines in Digger is create a new environment and select a different target.
 
 ## Serverless
 
@@ -82,21 +83,21 @@ This is a loaded term :)
 
 **Serverless.com** is a web UI of the Serverless Framework. Similarly to Digger, it manages your AWS account from its backend.
 
-----------
+---
 
 ### Digger vs Heroku feature comparison
 
-|                             | Digger + AWS            | Heroku            |
-| --------------------------- | ----------------------- | ----------------- |
-| Your code runs in           | Your AWS account        | Heroku servers    |
-| Control over infrastructure | Yes                     | No                |
-| Free credits                | up to $100k             | None              |
-| Compute with 1GB of RAM     | $7.6 per month          | $25 per month     |
-| Database with 8GB of RAM    | $99 per month           | $200 per month    |
-| Services provided           | 200+                    | ~10               |
-| Regions                     | 25                      | 6                 |
-| Compliance                  | Enterprise-grade        | Limited           |
-| Infrastructure-as-code      | Yes                     | No                |
-| Kubernetes                  | Yes                     | No                |
-| Serverless                  | Yes                     | No                |
-| Data stays in your cloud    | Yes                     | No                |
+|                             | Digger + AWS     | Heroku         |
+| --------------------------- | ---------------- | -------------- |
+| Your code runs in           | Your AWS account | Heroku servers |
+| Control over infrastructure | Yes              | No             |
+| Free credits                | up to $100k      | None           |
+| Compute with 1GB of RAM     | $7.6 per month   | $25 per month  |
+| Database with 8GB of RAM    | $99 per month    | $200 per month |
+| Services provided           | 200+             | ~10            |
+| Regions                     | 25               | 6              |
+| Compliance                  | Enterprise-grade | Limited        |
+| Infrastructure-as-code      | Yes              | No             |
+| Kubernetes                  | Yes              | No             |
+| Serverless                  | Yes              | No             |
+| Data stays in your cloud    | Yes              | No             |

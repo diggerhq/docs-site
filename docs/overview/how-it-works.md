@@ -18,9 +18,9 @@ To address this, Digger introduces several new [Concepts](./concepts):
 
 - **Resources** (databases, object storage, queues, etc) - infrastructure dependencies required by Services. For example, "postgres 12 database".
 
-Services and Resources form the *logical* structure of your stack. We call it "infrastructure interface" - what your code needs from the infrastructure
+Services and Resources form the _logical_ structure of your stack. We call it "infrastructure interface" - what your code needs from the infrastructure
 
-- **Environments** - isolated independent copies of your entire stack. Each Environment has Configuration that defines the specific *implementation* of infrastructure supporting your code. For example, your Dev environment could be a small EC2 box with docker-compose, and Production could run in a dedicated Kubernetes cluster with multi-AZ RDS. Services and Resources can be configured independently for each environment.
+- **Environments** - isolated independent copies of your entire stack. Each Environment has Configuration that defines the specific _implementation_ of infrastructure supporting your code. For example, your Dev environment could be a small EC2 box with docker-compose, and Production could run in a dedicated Kubernetes cluster with multi-AZ RDS. Services and Resources can be configured independently for each environment.
 
 - **Targets** - generic templates that generate specific implementation (Terraform) for each environment. Each Target can support a wide variety of stacks. More in [Understanding Targets](#understanding-targets)
 
@@ -30,15 +30,16 @@ Knowing the structure of your stack and the state of each environment allows Dig
 
 ## Understanding Targets
 
-Digger Targets are the templates for the infrastructure that Digger creates and manages in your AWS account. We had to come up with a new name because Terraform files are commonly referred to as "templates" - whereas Digger Targets _produce_ Terraform, so they are "temmplates of templates" in a way.
+Digger Targets are the templates for the infrastructure that Digger creates and manages in your AWS account. We had to come up with a new name because Terraform files are commonly referred to as "templates" - whereas Digger Targets _produce_ Terraform, so they are "templates of templates" in a way.
 
 This extra layer is needed because Digger cleanly separates infrastructure implementation from configuration. A Target does not describe your infrastructure precisely - instead, it describes a particular architecture that can produce many possible variations for a wide variety of stacks, depending on configuration.
 
 ```
 Stack State + Target + Environment Config => Terraform for a particular environment
 ```
+
 - **Stack State** is the logical structure of your stack - apps, services, databases etc.
-- **Environment Config** is configuration specific to a particular environment. 
+- **Environment Config** is configuration specific to a particular environment.
 - **Target** takes Stack State and Environment Config and produces Terraform
 
 :::tip
