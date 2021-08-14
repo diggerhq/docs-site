@@ -41,7 +41,7 @@ Configuration specific to a particular environment. It stores parameters such as
 
 ## Target
 
-Targets are generic templates that generate specific implementation (Terraform) for each environment. Each Target can support a wide variety of stacks. More in [Understanding Targets](./understanding-targets)
+Targets are generic templates that generate specific implementation (Terraform) for each environment. Each Target can support a wide variety of stacks. More in [Understanding Targets](./how-it-works.html#understanding-targets)
 
 ## Infrastructure Repository
 
