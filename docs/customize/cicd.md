@@ -1,4 +1,4 @@
-# CI/CD Using Digger
+# CI/CD Integrations
 
 You can use digger CLI within your CI/CD pipeline within your favourite tools such as Github Actions, CircliCI or TravicCI. Digger CLI `dg` can easily be used within your CI system to support your releasing. All you need is your digger token and AWS keys and then you can follow the system of your choise
 

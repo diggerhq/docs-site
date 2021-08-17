@@ -6,27 +6,45 @@ module.exports = {
         {
           title: 'Overview',
           collapsable: false,
+          sidebarDepth: 0,
           children: [
             '/',
             '/overview/concepts',
-            '/overview/technical-design',
-            '/overview/digger-vs-other'
+            '/overview/how-it-works',
+            '/overview/digger-vs-other',
           ]
         },
         {
-          title: 'Getting Started',
+          title: 'Get Started',
           collapsable: false,
+          sidebarDepth: 0,
           children: [
-            '/getting-started/installation',
-            '/getting-started/cicd',
-            '/getting-started/node-express',
-          '/getting-started/django',
-            '/getting-started/secrets'
+            '/getting-started/secrets',
+          ]
+        },
+        {
+          title: 'CLI',
+          collapsable: false,
+          sidebarDepth: 0,
+          children: [
+            '/cli/installation',
+            '/cli/node-express',
+            '/cli/django',
+          ]
+        },
+        {
+          title: 'Customize',
+          collapsable: false,
+          sidebarDepth: 1,
+          children: [
+            '/customize/terraform',
+            '/customize/cicd',
           ]
         },
         {
           title: 'Reference',
           collapsable: false,
+          sidebarDepth: 0,
           children: [
             '/reference-cli',
             '/reference-yaml',
@@ -37,7 +55,6 @@ module.exports = {
           collapsable: false,
           children: [
             '/misc/tagging-and-rollbacks',
-            '/misc/composing-terraform-templates',
           ]
         }
       ]
