@@ -6,20 +6,20 @@ API is subject to change in future versions of the CLI.
 :::
 
 ::: tip
-Almost all commands are run in the context of digger.yml. This is used to identify the project name and services for this project. The state of services however is maintained in the backend. We can sync the services of a project with `dg sync` command. The expected context for each command is highlighted under each heading.
+Almost all commands are run in the context of Lemon.yml. This is used to identify the project name and services for this project. The state of services however is maintained in the backend. We can sync the services of a project with `dg sync` command. The expected context for each command is highlighted under each heading.
 :::
 
 ## dg auth
 - Requires Auth: no
 - Context: N/A
 
-Authenticate and retrieve Digger token. This command open browser for authentication.
+Authenticate and retrieve Lemon token. This command open browser for authentication.
 
 ## dg project init
 - Requires Auth: yes
-- Context: Project root (initialises digger.yml)
+- Context: Project root (initialises Lemon.yml)
 
-Initialize a project by name (creates entry in backend). Also creates initial digger.yml file.
+Initialize a project by name (creates entry in backend). Also creates initial Lemon.yml file.
 
 
 | Option                      | Description                                                                    | Required          |
@@ -29,35 +29,35 @@ Initialize a project by name (creates entry in backend). Also creates initial di
 
 ## dg sync
 - Requires Auth: yes
-- Context: digger.yml
+- Context: Lemon.yml
 
-Sync services from digger.yml to backend.
+Sync services from Lemon.yml to backend.
 
 ## dg service add
 - Requires Auth: yes
-- Context: digger.yml
+- Context: Lemon.yml
 
-Helper to add a service to digger.yml. Will ask you for the path to the service and then guess the details of this service in digger.yml.
+Helper to add a service to Lemon.yml. Will ask you for the path to the service and then guess the details of this service in Lemon.yml.
 
 ## dg env build env_name
 - Requires Auth: yes
-- Context: digger.yml
+- Context: Lemon.yml
 
 
 | Option                      | Description                                                                                                      | Required          |
 | --------------------------- | ---------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `--service`                 | The name of the service. <br><br>This needs to be present in the digger.yml `services` section                   | No                |
+| `--service`                 | The name of the service. <br><br>This needs to be present in the Lemon.yml `services` section                   | No                |
 | `--tag`                     | The tag of the image to be built - default to 'latest'                                                           | No                |
 | `--context`                 | For docker container builds. The context of the docker build.<br><br> Defaults to the location of the Dockerfile | No                |
 
 
 ## dg env push env_name
 - Requires Auth: yes
-- Context: digger.yml
+- Context: Lemon.yml
 
 | Option                      | Description                                                                                                      | Required          |
 | --------------------------- | ---------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `--service`                 | The name of the service. <br><br>This needs to be present in the digger.yml `services` section                   | No                |
+| `--service`                 | The name of the service. <br><br>This needs to be present in the Lemon.yml `services` section                   | No                |
 | `--tag`                     | The tag of the image to be built - default to 'latest'                                                           | No                |
 | `--aws-key`                 | The AWS key of the account that contains the ECR respository                                                     | No                |
 | `--aws-secret`              | The AWS secret of the account with ECR repository                                                                | No                |
@@ -65,11 +65,11 @@ Helper to add a service to digger.yml. Will ask you for the path to the service 
 
 ## dg env release env_name
 - Requires Auth: yes
-- Context: digger.yml
+- Context: Lemon.yml
 
 | Option                      | Description                                                                                                      | Required          |
 | --------------------------- | ---------------------------------------------------------------------------------------------------------------- | ----------------- |
-| `--service`                 | The name of the service. <br><br>This needs to be present in the digger.yml `services` section                   | No                |
+| `--service`                 | The name of the service. <br><br>This needs to be present in the Lemon.yml `services` section                   | No                |
 | `--tag`                     | The tag of the image to be built - default to 'latest'                                                           | No                |
 | `--aws-key`                 | The AWS key of the account that contains the ECR respository                                                     | No                |
 | `--aws-secret`              | The AWS secret of the account with ECR repository                                                                | No                |
@@ -77,7 +77,7 @@ Helper to add a service to digger.yml. Will ask you for the path to the service 
 
 ## dg env create env_name
 - Requires Auth: yes
-- Context: digger.yml
+- Context: Lemon.yml
 
 
 | Option                      | Description                                                                                                              | Required          |
@@ -91,14 +91,14 @@ Helper to add a service to digger.yml. Will ask you for the path to the service 
 
 ## dg env plan env_name
 - Requires Auth: yes
-- Context: digger.yml
+- Context: Lemon.yml
 
 Outputs the list of planned resource that will be created for this environment. It is highly recommended to run this command before each apply.
 
 
 ## dg env apply env_name
 - Requires Auth: yes
-- Context: digger.yml
+- Context: Lemon.yml
 
 Applies the changes of the environment. Note: It is recommend to run a `dg plan` before `dg apply`.
 
@@ -109,7 +109,7 @@ Applies the changes of the environment. Note: It is recommend to run a `dg plan`
 
 ## dg env update env_name
 - Requires Auth: yes
-- Context: digger.yml
+- Context: Lemon.yml
 
 Update the settings of an environment. Currently supports updating of:
 
@@ -122,19 +122,19 @@ Usually will need to be followed by an `env apply` command
 
 ## dg env destroy env_name
 - Requires Auth: yes
-- Context: digger.yml
+- Context: Lemon.yml
 
 Destroy an environment (Warning: will destroy all infrastructure create)
 
 ## dg env describe env_name
 - Requires Auth: yes
-- Context: digger.yml
+- Context: Lemon.yml
 
 Print all the details of an existing environment including all terraform outputs (Warning verbose output).
 
 ## dg env list
 - Requires Auth: yes
-- Context: digger.yml
+- Context: Lemon.yml
 
 List all the existing environments, along with some details about them.
 
