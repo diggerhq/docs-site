@@ -22,7 +22,7 @@ You can launch in minutes – no need to build from scratch, or even think of in
 
 ### You keep the full power of AWS
 
-Traditional PaaS like Heroku or Vercel run your code on their servers. Digger takes a different approach: it generates infrastructure-as-code (Terraform) that manages your AWS account. See [Digger vs Ohter](./overview/digger-vs-other)
+Traditional PaaS like Heroku or Vercel run your code on their servers. Digger takes a different approach: it generates infrastructure-as-code (Terraform) that manages your AWS account. See [Digger vs Other](./overview/digger-vs-other)
 
 This removes the main limitation of traditional PaaS. With Digger you can have great modern developer experience **and** get a future-proof stack at the same time. Terraform is industry standard for all things DevOps; with Digger you can customise every bit. You can even use your own bespoke templates with Digger. So unlike traditional PaaS, you never outgrow Digger.
 
@@ -32,7 +32,7 @@ Great question. Neither did Microsoft, nor did Google. We at Digger believe this
 
 AWS, GCP and Azure are essentially identical these days for the 95% of tasks at hand – but they don't want to make it easy for you to move to a different provider. So they lure you in with free credits, and then even if you aren't building anything unique you are unlikely to move – because you have invested lots of time in learning it.
 
-To be fair, AWS has introduced a number of easy-to-use tools. Beanstalk is the oldest one (their answer to Heroku); there's also Amplify, Copilot, Lightsail. But these tools suffer from the same problem as traditional PaaS: they severely limit your options. With Amplify you can only build static web apps (like Netlify); Copilot is exclusively for containers (like Google Cloud Run); Lightsail is essentially a simplified interface for a single EC2 instance (like Digital Ocean Droplet). See [Digger vs Ohter](./overview/digger-vs-other).
+To be fair, AWS has introduced a number of easy-to-use tools. Beanstalk is the oldest one (their answer to Heroku); there's also Amplify, Copilot, Lightsail. But these tools suffer from the same problem as traditional PaaS: they severely limit your options. With Amplify you can only build static web apps (like Netlify); Copilot is exclusively for containers (like Google Cloud Run); Lightsail is essentially a simplified interface for a single EC2 instance (like Digital Ocean Droplet). See [Digger vs Other](./overview/digger-vs-other).
 
 Major cloud providers today are strikingly similar to hardware manufacturers of 1970s. Each is making a collection of specialised "devices" – managed cloud services. Until recently they competed with each other by introducing new types of devices like specialised databases, serverless functions, container runtimes. But now the main types of devices are firmly established, with the possible exception of tools specific to machine learning. AWS, GCP and Azure today are one step away from becoming under-the-hood commodities – just like vendors of graphic cards, RAM and other standardised PC compoenents.
 
