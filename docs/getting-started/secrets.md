@@ -1,6 +1,6 @@
 # Secrets
 
-Digger has a unique way of handling secrets by never storing them. We will integrate with yor cloud provider to store your secrets in your own account and then at every release we load the secret in your app. In this way Digger never sees your secrets and sensitive data.
+Digger has a unique way of handling secrets by never storing them. We will integrate with your cloud provider to store your secrets in your own account and then at every release we load the secret in your app. In this way Digger never sees your secrets and sensitive data.
 
 Let us look at the steps creating a secret in your AWS account using ParameterStore and integrating this in your service so that your application can read it.
 
@@ -11,7 +11,7 @@ First of all go to the parameterstore section by searching for it:
 Next step is to click on create parameter:
 
 ![Parameter Store](../img/parameterstore_view.png)
-    
+
 Fill in a name, Use a "SecureSecret" as a type and then fill in your sensitive value:
 
 ![Parameter Store](../img/parameterstore_new.png)
