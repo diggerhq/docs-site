@@ -7,8 +7,8 @@ Cloud providers like AWS are extremely complex. Without prior DevOps expertise i
 
 So you are forced to choose between great developer experience and building a future-proof stack. **This is wrong.** Imagine if mobile developers needed one set of tools to _start_ building an app, and had to rebuild it with entirely different tools after a year or so – wouldn't that be ridiculous?
 
-
 ### Digger makes AWS simple
+
 It automatically generates infrastructure for your code in your AWS account.
 So you can build on AWS without having to deal with its complexity. See [How it works](./overview/how-it-works)
 
@@ -36,4 +36,4 @@ To be fair, AWS has introduced a number of easy-to-use tools. Beanstalk is the o
 
 Major cloud providers today are strikingly similar to hardware manufacturers of 1970s. Each is making a collection of specialised "devices" – managed cloud services. Until recently they competed with each other by introducing new types of devices like specialised databases, serverless functions, container runtimes. But now the main types of devices are firmly established, with the possible exception of tools specific to machine learning. AWS, GCP and Azure today are one step away from becoming under-the-hood commodities – just like vendors of graphic cards, RAM and other standardised PC compoenents.
 
-For Amazon, Microsoft and Google introducing a simplification layer that is based on a cloud-agnostic open source tool (Terraform) would mean becoming commodities quicker. They don't want this. But it's inevitable, someone will do it eventually. So we thought we'd give it a shot. 
+For Amazon, Microsoft and Google introducing a simplification layer that is based on a cloud-agnostic open source tool (Terraform) would mean becoming commodities quicker. They don't want this. But it's inevitable, someone will do it eventually. So we thought we'd give it a shot.
