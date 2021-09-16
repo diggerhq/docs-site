@@ -55,6 +55,7 @@ module.exports = {
           collapsable: false,
           children: [
             '/misc/tagging-and-rollbacks',
+            '/misc/env-vars-build',
           ]
         }
       ]
