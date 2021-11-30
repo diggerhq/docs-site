@@ -39,3 +39,69 @@ Keep this value at hand and then head over to [app.digger.dev](https://app.digge
 ![Parameter Store](../img/secret_settings.png)
 
 Once you add an entry you just need to trigger a release (using `dg env release` command) and your app can now access the secret under the `SHINY` environment variable!
+
+## Lambda Secrets
+
+For lambda integration with parameter store you will need to do the following:
+
+1. Create a new role from the [roles IAM] section. You want to attach at least `AWSLambdaExecutionRole` and `AmazonSSMReadOnlyAccess` to allow your lambda to read the ParameterStoreSecrets
+
+![](../img/lambda-secrets1.png)
+
+![](../img/lambda-secrets2.png)
+
+![](../img/lambda-secrets3.png)
+
+![](../img/lambda-secrets4.png)
+
+![](../img/lambda-secrets5.png)
+
+2. configure your lambda functions to use this role in digger app. This is from the environment section by setting the option of your `lambda_role` to the arn of the created option. After you set this option update the environment.
+
+![](../img/lambda-secrets6.png)
+
+3. Update your lambda code to read this secret. This is language dependant but here is an example of doing this using boto3 library in python
+
+
+```python
+import os, traceback, json, configparser, boto3
+from aws_xray_sdk.core import patch_all
+patch_all()
+
+# Initialize boto3 client at global scope for connection reuse
+client = boto3.client('ssm')
+# this is the name of the ssm parameter in the smae region
+app_config_path = os.environ['DATABASE_URL_PARAM']
+
+def load_config(ssm_parameter_name):
+    """
+    Load configparser from config stored in SSM Parameter Store
+    :param ssm_parameter_name: Name of the parameter to fetch
+    :return: ConfigParser holding loaded config
+    """
+    configuration = configparser.ConfigParser()
+    try:
+        # Get all parameters for this app
+        param_details = client.get_parameter(
+            Name=ssm_parameter_name,
+            WithDecryption=True
+        )
+
+        return param_details["Parameter"]["Value"]
+
+    except:
+        print("Encountered an error loading config from SSM.")
+        traceback.print_exc()
+    finally:
+        return configuration
+
+def lambda_handler(event, context):
+    global app
+    # Initialize app if it doesn't yet exist
+    if app is None:
+        print("Loading config and creating new MyApp...")
+        config = load_config(app_config_path)
+
+    return "config is " + str(app.get_config()._sections)
+
+```

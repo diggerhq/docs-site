@@ -15,14 +15,6 @@ module.exports = {
           ]
         },
         {
-          title: 'Get Started',
-          collapsable: false,
-          sidebarDepth: 0,
-          children: [
-            '/getting-started/secrets',
-          ]
-        },
-        {
           title: 'CLI',
           collapsable: false,
           sidebarDepth: 0,
@@ -56,6 +48,7 @@ module.exports = {
           children: [
             '/misc/tagging-and-rollbacks',
             '/misc/env-vars-build',
+            '/misc/secrets',
           ]
         }
       ]
