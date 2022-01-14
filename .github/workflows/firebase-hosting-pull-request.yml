@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: 'npm run install'
+      - run: 'npm install'
       - run: 'npm run docs:build'
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
