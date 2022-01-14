@@ -46,6 +46,7 @@ module.exports = {
           title: 'Miscellaneous',
           collapsable: false,
           children: [
+            '/misc/aws-keys',
             '/misc/tagging-and-rollbacks',
             '/misc/env-vars-build',
             '/misc/secrets',
