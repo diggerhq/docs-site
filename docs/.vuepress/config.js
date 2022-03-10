@@ -17,9 +17,10 @@ module.exports = {
         {
           title: 'Quick Start',
           collapsable: false,
-          sidebarDepth: 0,
+          sidebarDepth: 2,
           children: [
             '/get-started/deploy-a-lambda',
+            '/get-started/deploy-react-app',
           ]
         },
         {

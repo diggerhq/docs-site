@@ -7,7 +7,7 @@ Before starting the tutorial, please do the following:
 * Create a [Digger](https://digger.dev/) account.
 * Create an [AWS](https://aws.amazon.com/) account.
 * Create a [GitHub](https://github.com/) account.
-* Create an AWS user with administrator permissions.
+* [Create an AWS user with administrator permissions](https://learn.digger.dev/misc/aws-keys.html)
 
 ## What infrastructure we are trying to create?
 Let's try to deploy a simple AWS lambda function with AWS API Gateway in front of it. We should be able to call lambda function using http request. Source code for the lambda is [here](https://github.com/diggerhq/a-nodeapp).
@@ -60,6 +60,6 @@ And we can see the url of API Gateway in logs.
 ![](https://blog.digger.dev/content/images/2022/03/image-20.png)
 Let's send a http request.
 
-## Done!
+**Done!**
 
 We've created a lambda function with API Gateway in front of it, just in a few clicks. Now we can easily create new test "environments" if needed.
