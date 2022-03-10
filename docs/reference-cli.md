@@ -1,4 +1,6 @@
-# CLI reference
+# CLI (alpha) reference 
+
+*Our CLI is in alpha, if you'd like to try it, ask one of our team!*
 
 Did you know that our CLI is open source? You can contribute [bug reports and feature requests on GitHub](https://github.com/diggerhq/cli)
 

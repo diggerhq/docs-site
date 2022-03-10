@@ -15,13 +15,11 @@ module.exports = {
           ]
         },
         {
-          title: 'CLI',
+          title: 'Quick Start',
           collapsable: false,
           sidebarDepth: 0,
           children: [
-            '/cli/installation',
-            '/cli/node-express',
-            '/cli/django',
+            '/get-started/deploy-a-lambda',
           ]
         },
         {
