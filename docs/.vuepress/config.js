@@ -37,8 +37,10 @@ module.exports = {
           collapsable: false,
           sidebarDepth: 0,
           children: [
-            '/reference-cli',
             '/reference-yaml',
+            '/reference-digger-supported-tech-supported',
+            '/reference-digger-key-features',
+            '/reference-cli'
           ]
         },
         {
