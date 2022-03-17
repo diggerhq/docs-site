@@ -38,7 +38,7 @@ module.exports = {
           sidebarDepth: 0,
           children: [
             '/reference-yaml',
-            '/reference-digger-supported-tech-supported',
+            '/reference-digger-supported-tech',
             '/reference-digger-key-features',
             '/reference-cli'
           ]
