@@ -30,6 +30,7 @@ module.exports = {
           children: [
             '/customize/terraform',
             '/customize/cicd',
+            '/customize/project',
           ]
         },
         {
