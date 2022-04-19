@@ -47,6 +47,7 @@ module.exports = {
           collapsable: false,
           children: [
             '/misc/aws-keys',
+            '/misc/adding-domains-with-vercel',
             '/misc/tagging-and-rollbacks',
             '/misc/env-vars-build',
             '/misc/secrets',
