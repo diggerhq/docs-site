@@ -1,4 +1,4 @@
-# How It Works
+# How Digger Works
 
 Unlike traditional PaaS like Vercel or Heroku, Digger is not hosting your code on Digger servers. Instead, it manages your cloud account (AWS, GCP, Azure) through infrastructure-as-code. It generates Terraform (the industry standard DevOps tool) and runs it on Digger servers. Terraform in turn ensures that your stack is in the exact state it needs to be.
 

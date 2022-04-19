@@ -1,4 +1,6 @@
-# CLI reference
+# CLI (legacy) reference 
+
+*Our CLI is legacy. We are supporting it for existing customers but not actively developing it*
 
 Did you know that our CLI is open source? You can contribute [bug reports and feature requests on GitHub](https://github.com/diggerhq/cli)
 

@@ -1,6 +1,6 @@
 # Write your own Terraform
 
-Digger does not limit you to the buttons of its UI and commands of its CLI. Every team at some point needs to build something unique to their business. We recognise that and make it quite straightforward. Building custom infrastructure with Digger is not any harder than doing it on AWS directly - and you still benefit from centralised state and configuration management provided by Digger.
+Digger does not limit you to the buttons of its UI. Every team at some point needs to build something unique to their business. We recognise that and make it quite straightforward. Building custom infrastructure with Digger is not any harder than doing it on AWS directly - and you still benefit from centralised state and configuration management provided by Digger.
 
 There are 2 ways to build custom infrastructure with Digger:
 

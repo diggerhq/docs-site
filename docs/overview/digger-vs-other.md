@@ -2,7 +2,7 @@
 sidebarDepth: 1
 ---
 
-# Digger vs Other
+# Digger vs Heroku etc.
 
 Existing cloud platforms on the market today give you one of the two:
 

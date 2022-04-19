@@ -15,13 +15,12 @@ module.exports = {
           ]
         },
         {
-          title: 'CLI',
+          title: 'Quick Start',
           collapsable: false,
-          sidebarDepth: 0,
+          sidebarDepth: 2,
           children: [
-            '/cli/installation',
-            '/cli/node-express',
-            '/cli/django',
+            '/get-started/deploy-a-lambda',
+            '/get-started/deploy-react-app',
           ]
         },
         {
@@ -31,6 +30,7 @@ module.exports = {
           children: [
             '/customize/terraform',
             '/customize/cicd',
+            '/customize/project',
           ]
         },
         {
@@ -38,8 +38,10 @@ module.exports = {
           collapsable: false,
           sidebarDepth: 0,
           children: [
-            '/reference-cli',
             '/reference-yaml',
+            '/reference-digger-supported-tech',
+            '/reference-digger-key-features',
+            '/reference-cli'
           ]
         },
         {
