@@ -3,7 +3,7 @@
 To use digger with a domain that is purchased through Vercel it works like any other domain. However there is a caveat since a domain purchased through vercel already has a "CAA" record for certificate validation. This doesn't play with with Amazon's Certificate Manager service. To cut a long story short, in order to get it working with digger-configured domain you need to add an additional CAA record:
 
 ```
-NAME: inhabit.eco
+NAME: <<mydomain.com>>
 VALUE: 0 issue "amazonaws.com"
 ```
 
