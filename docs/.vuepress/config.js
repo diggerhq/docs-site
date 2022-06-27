@@ -19,8 +19,16 @@ module.exports = {
           collapsable: false,
           sidebarDepth: 2,
           children: [
-            '/get-started/deploy-a-lambda',
-            '/get-started/deploy-react-app',
+            '/get-started/deploy-node-app',
+          ]
+        },        
+        {
+          title: 'Next Steps',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            '/next-steps/deploy-a-lambda',
+            '/next-steps/deploy-react-app',
           ]
         },
         {
