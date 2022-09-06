@@ -49,7 +49,8 @@ module.exports = {
             '/reference-yaml',
             '/reference-digger-supported-tech',
             '/reference-digger-key-features',
-            '/reference-cli'
+            '/reference-cli',
+            '/cli/installation',
           ]
         },
         {
